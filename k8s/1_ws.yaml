@@ -27,12 +27,6 @@ spec:
           limits:
             memory: "512Mi"   
             cpu: "256m"
-        env:
-          - name: RABBITMQ_HOST
-            valueFrom: 
-              configMapKeyRef:
-                name: hrmis-config-map
-                key: SPRING_RABBITMQ_HOST
 
 ---
 apiVersion: v1
