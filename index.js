@@ -17,8 +17,8 @@ io.on("connection", (socket) => {
 
   socket.on("newOrderAdded", (data) => {
     io.emit("readAddedNewOrder", data);
+    console.log("newOrder is added");
   });
-
 });
 
 server.listen(5500, () => {
