@@ -11,7 +11,7 @@ const io = new Server(server, {
 io.on("connection", (socket) => {
   console.log("a user connected");
 
-  socket.on("customerHelpAlert", (data) => {
+  socket.on("RequestCustomerHelp", (data) => {
     io.emit("readHelpRequest", data);
   });
 
