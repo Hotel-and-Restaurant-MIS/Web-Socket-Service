@@ -19,6 +19,12 @@ io.on("connection", (socket) => {
     io.emit("readAddedNewOrder", data);
     console.log("newOrder is added");
   });
+
+  socket.on("orderStatusUpdated", (data) => {
+    io.emit("readUpdatedOrderStatus", data);
+    console.log("Order status is changed");
+  });
+  
 });
 
 server.listen(5500, () => {
