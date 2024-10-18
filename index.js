@@ -27,6 +27,9 @@ io.on("connection", (socket) => {
     io.emit("readRequestBill", data);
   });
 
+  socket.on("completeTablePayment", (data) => {
+    io.emit("readPayment", data);
+  });
 });
 
 server.listen(5500, () => {
